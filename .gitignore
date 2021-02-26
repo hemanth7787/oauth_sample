@@ -1,0 +1,32 @@
+#python
+*.pyc
+
+#Sqlite DB
+*.sqlite
+*.sqlite3
+
+#program generated files
+*.log
+
+#Python Virtual env
+env/
+static/
+media/
+
+#confidential env variables
+*.private.rc
+
+
+.directory
+.vscode/
+
+
+action_items.txt
+CTA.top.diff
+graph.sh
+__init__.py_celery
+celery.py
+old/
+tasks.py
+samp.png
+sync.sh

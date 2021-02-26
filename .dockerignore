@@ -1,0 +1,21 @@
+.git/
+
+#python
+*.pyc
+
+#Sqlite DB
+*.sqlite
+*.sqlite3
+
+#program generated files
+*.log
+
+#Python Virtual env
+env/
+venv/
+.venv/
+iamenv/
+
+
+#confidential env variables
+*.private.rc
