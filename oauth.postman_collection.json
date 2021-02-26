@@ -1,0 +1,261 @@
+{
+	"info": {
+		"_postman_id": "5a486865-c940-49d9-a695-24f88808dfe6",
+		"name": "oauth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Hello",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "OmlTmtXk907izYUsu5o2tGvIG7ZUsS",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"grant_type\":\"password\",\n    \"client_id\":\"xxx\",\n    \"client_secret\": \"xx\",\n    \"username\":\"s\",\n    \"password\": \"s\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/hello",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth - get token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"grant_type\": \"password\",\n    \"client_id\": \"c9Cuw1guVKHE5mQFrFqV4X8wxQ1hRFji4WE3i9Bt\",\n    \"client_secret\": \"WiwlAp0CHIUkj1a86jminV3JziWOZhbgI8IFmD0rIxif5Buxd6oCynuJdXNj4ChbLKK75TkQWNEA3EKvwy8HrHY9fwRp57BSKZwZCwI80FnrZrpZnDitngdPX8C1XReO\",\n    \"username\": \"nidheesh\",\n    \"password\": \"E6mX52wzVWMLndr\",\n    \"scope\": \"read write groups\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/o/token/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"o",
+						"token",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "x77ExHXkadq7TZOHm2Yv9U0jFtveaW",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/o/users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"o",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Groups",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "DnWtIe2QbymeUvmnZcuguEmepiMSly",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/o/groups/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"o",
+						"groups",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Introspect",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "thcDr6czeIiTtOXUHIh17ZRsFC6OGJ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "token",
+							"value": "thcDr6czeIiTtOXUHIh17ZRsFC6OGJ",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/o/introspect/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"o",
+						"introspect",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "R1 secret resource",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "thcDr6czeIiTtOXUHIh17ZRsFC6OGJ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8001/api/hello",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth - get token -- clinet credentials",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"grant_type\": \"client_credentials\",\n    \"client_id\": \"70XsQzYU7wt9sYTa43IzESduqqTgZseJ15H4TNdH\",\n    \"client_secret\": \"e8w8MqDsInkd5QrGd6LYbw2P2SWH6m7NXYwwJI1esvOPTXfDUljwkueaBc48rctQb9qXXZZY37oORvahWGEW0UJKquoaByScvM4vpK7Y22ZgrLkvdBvU1bUoUo0h4sDO\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/o/token/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"o",
+						"token",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
