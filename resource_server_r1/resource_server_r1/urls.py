@@ -9,7 +9,7 @@ from utils.apis.r2_api import R2Api
 
 class ApiEndpoint(APIView):
     permission_classes = [permissions.IsAuthenticated, TokenHasScope]
-    required_scopes = ['groups']
+    required_scopes = ['users']
 
     def get(self, request, *args, **kwargs):
         # print(f"Token: {request.auth.token}, scopes: {str(request.auth.scope).split(' ')}")
