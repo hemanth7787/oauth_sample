@@ -152,7 +152,11 @@ REST_FRAMEWORK = {
 
 OAUTH2_PROVIDER = {
     'RESOURCE_SERVER_INTROSPECTION_URL': 'http://127.0.0.1:8000/o/introspect/',
-    'RESOURCE_SERVER_AUTH_TOKEN': 'thcDr6czeIiTtOXUHIh17ZRsFC6OGJ',  # OR this but not both:
-    # 'RESOURCE_SERVER_INTROSPECTION_CREDENTIALS': ('rs_client_id','rs_client_secret'),
+    # 'RESOURCE_SERVER_AUTH_TOKEN': 'g23aKZ74o3nFdk4ZVsRLG9QevlCeSb',  # OR this but not both:
+    'RESOURCE_SERVER_INTROSPECTION_CREDENTIALS': ('70XsQzYU7wt9sYTa43IzESduqqTgZseJ15H4TNdH', 'e8w8MqDsInkd5QrGd6LYbw2P2SWH6m7NXYwwJI1esvOPTXfDUljwkueaBc48rctQb9qXXZZY37oORvahWGEW0UJKquoaByScvM4vpK7Y22ZgrLkvdBvU1bUoUo0h4sDO'),
     'OAUTH2_BACKEND_CLASS': 'oauth2_provider.oauth2_backends.JSONOAuthLibCore',
 }
+
+
+# Resource server hosts
+R2_API_BASEURL = "http://localhost:8000"

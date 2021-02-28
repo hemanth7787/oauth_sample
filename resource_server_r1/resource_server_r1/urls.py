@@ -1,9 +1,10 @@
+from django.contrib import admin
 from django.urls import path
-from django.http import HttpResponse
-from rest_framework.views import APIView
 from oauth2_provider.contrib.rest_framework import TokenHasScope
 from rest_framework import permissions
-from django.contrib import admin
+from rest_framework.response import Response
+from rest_framework.views import APIView
+from utils.apis.r2_api import R2Api
 
 
 class ApiEndpoint(APIView):
@@ -11,7 +12,10 @@ class ApiEndpoint(APIView):
     required_scopes = ['groups']
 
     def get(self, request, *args, **kwargs):
-        return HttpResponse('Hello, OAuth2!')
+        # print(f"Token: {request.auth.token}, scopes: {str(request.auth.scope).split(' ')}")
+        # return data from another microservice
+        api = R2Api(token=request.auth.token)
+        return Response(api.user_list())
 
 
 urlpatterns = [
